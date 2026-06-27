@@ -34,24 +34,25 @@ const GlassIcons: React.FC<GlassIconsProps> = ({ items, className }) => {
   return (
     <div className={`icon-btns ${className || ""}`}>
       {items.map((item, index) => (
-        <button
-          key={index}
-          type="button"
-          className={`icon-btn ${item.customClass || ""}`}
-          aria-label={item.label}
-          onClick={item.onClick}
-        >
-          <span
-            className="icon-btn__back"
-            style={getBackgroundStyle(item.color)}
-          ></span>
-          <span className="icon-btn__front">
-            <span className="icon-btn__icon" aria-hidden="true">
-              {item.icon}
+        <div className="icon-btn-wrap" key={index}>
+          <button
+            type="button"
+            className={`icon-btn ${item.customClass || ""}`}
+            aria-label={item.label}
+            onClick={item.onClick}
+          >
+            <span
+              className="icon-btn__back"
+              style={getBackgroundStyle(item.color)}
+            ></span>
+            <span className="icon-btn__front">
+              <span className="icon-btn__icon" aria-hidden="true">
+                {item.icon}
+              </span>
             </span>
-          </span>
+          </button>
           <span className="icon-btn__label">{item.label}</span>
-        </button>
+        </div>
       ))}
     </div>
   );
