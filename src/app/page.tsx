@@ -263,7 +263,7 @@ const Home: NextPage = () => {
             I Build Data & AI Systems That Drive Impact
           </h1>
           <p className={`text-xl text-gray-600 dark:text-zinc-400 max-w-2xl mx-auto mb-10 ${styles['animate-fade-in']}`}>
-            From machine learning models to data pipelines and analytics—I help turn complex data into clear, actionable outcomes.
+            From machine learning models to data pipelines and analytics, I help turn complex data into clear, actionable outcomes.
           </p>
           <div className={styles['animate-fade-in-up']}>
             <Link
@@ -289,7 +289,7 @@ const Home: NextPage = () => {
                 <svg className="w-6 h-6 text-gray-700 dark:text-zinc-300 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
               </div>
               <h3 className="text-xl font-bold text-gray-900 dark:text-zinc-100 mb-3">Data & Machine Learning</h3>
-              <p className="text-gray-600 dark:text-zinc-400 leading-relaxed">Designing and building ML models and analytics that turn data into decisions—from forecasting to classification and NLP.</p>
+              <p className="text-gray-600 dark:text-zinc-400 leading-relaxed">Designing and building ML models and analytics that turn data into decisions, from forecasting to classification and NLP.</p>
               <span className="inline-flex items-center mt-4 text-gray-900 dark:text-zinc-100 font-medium text-sm group-hover:underline">View work →</span>
             </a>
             <a href="#projects" className="group block bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 rounded-lg p-8 hover:border-gray-300 hover:shadow-lg transition-all duration-300">
@@ -550,7 +550,7 @@ const Home: NextPage = () => {
               </div>
               <div className="p-6 flex flex-col">
                 <h3 className="text-xl font-bold text-gray-900 dark:text-zinc-100 mb-2">Kansas City Crime Analysis</h3>
-                <p className="text-gray-600 dark:text-zinc-400 text-sm mb-4">Interactive Tableau dashboard for crime data 2016–2022: COVID impact, hotspots, demographics.</p>
+                <p className="text-gray-600 dark:text-zinc-400 text-sm mb-4">Interactive Tableau dashboard for crime data 2016-2022: COVID impact, hotspots, demographics.</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   <span className="px-2.5 py-1 bg-gray-100 dark:bg-zinc-800 rounded text-xs text-gray-700 dark:text-zinc-300">Tableau</span>
                   <span className="px-2.5 py-1 bg-gray-100 dark:bg-zinc-800 rounded text-xs text-gray-700 dark:text-zinc-300">Data Analysis</span>
@@ -910,10 +910,10 @@ const Home: NextPage = () => {
           <div className="bg-white dark:bg-zinc-900 rounded-xl p-8 border border-gray-200 dark:border-zinc-800 shadow-sm">
             <div className="text-center space-y-6">
               <p className="text-xl text-gray-700 dark:text-zinc-300">
-                Plot twist: My resume is like a tech startup—<span className="italic">constantly iterating and shipping new features!</span>
+                Plot twist: My resume is like a tech startup, <span className="italic">constantly iterating and shipping new features!</span>
               </p>
               <p className="text-gray-600 dark:text-zinc-400">
-                Drop me a line for the latest version—it might have changed while you were reading this! 😄
+                Drop me a line for the latest version, it might have changed while you were reading this! 😄
               </p>
               <Link href="#contact" className="inline-block px-8 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-semibold rounded-sm hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors">
                 Request Latest Build v{new Date().toISOString().split('T')[0]} →

@@ -39,6 +39,17 @@ a {
   text-decoration: none !important;
 }
 
+/* Keep browser-autofilled inputs on-theme in dark mode
+   (autofill otherwise forces its own light background) */
+.dark input:-webkit-autofill,
+.dark input:-webkit-autofill:hover,
+.dark input:-webkit-autofill:focus,
+.dark textarea:-webkit-autofill {
+  -webkit-text-fill-color: #f4f4f5;
+  -webkit-box-shadow: 0 0 0 1000px #18181b inset;
+  caret-color: #f4f4f5;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
