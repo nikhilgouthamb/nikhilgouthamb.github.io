@@ -13,7 +13,6 @@ import GlassIcons from '@/components/GlassIcons';
 import '@/components/GlassIcons.css';
 import MagicBento from '@/components/MagicBento';
 import { useTheme } from '@/contexts/ThemeContext';
-import { useTheme } from '@/contexts/ThemeContext';
 
 function ThemeToggle() {
   const { theme, toggleTheme } = useTheme();
@@ -249,6 +248,7 @@ const Home: NextPage = () => {
                 <a href="#contact" className="inline-flex items-center px-5 py-2.5 bg-gray-900 text-white text-sm font-semibold rounded-sm hover:bg-gray-800 transition-colors" aria-label="Get in touch">
                   Get in Touch
                 </a>
+                <ThemeToggle />
           </div>
         </div>
       </nav>
