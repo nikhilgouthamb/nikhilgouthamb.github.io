@@ -20,7 +20,7 @@ function ThemeToggle() {
     <button
       type="button"
       onClick={toggleTheme}
-      className="p-2 rounded-lg text-gray-600 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-gray-100 dark:hover:bg-gray-800 transition-colors"
+      className="p-2 rounded-lg text-gray-600 dark:text-zinc-400 hover:text-gray-900 dark:hover:text-zinc-100 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-gray-100 dark:hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
       aria-label={theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode'}
     >
       {theme === 'light' ? (
@@ -54,18 +54,18 @@ const Home: NextPage = () => {
 
   if (isMobile) {
     return (
-      <div className="fixed inset-0 z-[9999] flex flex-col items-center justify-center text-center px-6 bg-[#fafafa]">
-        <div className="bg-white rounded-xl p-8 max-w-sm mx-auto shadow-lg border border-gray-200">
-          <h1 className="text-2xl font-bold text-gray-900 mb-4">Thanks for visiting my portfolio</h1>
-          <p className="text-gray-600 mb-8">It&apos;s best experienced on desktop. For now, reach out below.</p>
+      <div className="fixed inset-0 z-[9999] flex flex-col items-center justify-center text-center px-6 bg-[#fafafa] dark:bg-zinc-950">
+        <div className="bg-white dark:bg-zinc-900 rounded-xl p-8 max-w-sm mx-auto shadow-lg border border-gray-200 dark:border-zinc-800">
+          <h1 className="text-2xl font-bold text-gray-900 dark:text-zinc-100 mb-4">Thanks for visiting my portfolio</h1>
+          <p className="text-gray-600 dark:text-zinc-400 mb-8">It&apos;s best experienced on desktop. For now, reach out below.</p>
           <button
             onClick={() => window.location.href = 'mailto:bnikhilgoutham@gmail.com'}
-            className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white font-semibold rounded-sm hover:bg-gray-800 transition-colors mb-6"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-semibold rounded-sm hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors mb-6"
           >
             Contact Me
           </button>
           <div className="flex justify-center gap-4">
-            <a href="https://www.linkedin.com/in/nikhilgoutham" target="_blank" rel="noopener noreferrer" className="rounded-full bg-gray-100 p-3 hover:bg-gray-200 transition-colors" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/nikhilgoutham" target="_blank" rel="noopener noreferrer" className="rounded-full bg-gray-100 dark:bg-zinc-800 p-3 hover:bg-gray-200 transition-colors" aria-label="LinkedIn">
               <Image src="/linkedin_cg.png" alt="LinkedIn" width={24} height={24} className="object-contain" />
             </a>
           </div>
@@ -224,28 +224,28 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <main className="relative min-h-screen w-full bg-[#fafafa]">
+      <main className="relative min-h-screen w-full bg-[#fafafa] dark:bg-zinc-950">
         <div className="relative z-10">
       {/* Navigation - dotlogics style: clean light bar */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200" role="navigation" aria-label="Main navigation">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-zinc-900/95 backdrop-blur-sm border-b border-gray-200 dark:border-zinc-800" role="navigation" aria-label="Main navigation">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-end h-16 gap-8">
-                <a href="#about" className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium uppercase tracking-wide" aria-label="Navigate to About section">
+                <a href="#about" className="text-gray-600 dark:text-zinc-400 hover:text-gray-900 dark:hover:text-zinc-100 transition-colors text-sm font-medium uppercase tracking-wide" aria-label="Navigate to About section">
                 About
                 </a>
-                <a href="#how-i-help" className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium uppercase tracking-wide" aria-label="How I Help">
+                <a href="#how-i-help" className="text-gray-600 dark:text-zinc-400 hover:text-gray-900 dark:hover:text-zinc-100 transition-colors text-sm font-medium uppercase tracking-wide" aria-label="How I Help">
                 How I Help
                 </a>
-                <a href="#projects" className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium uppercase tracking-wide" aria-label="Navigate to Work section">
+                <a href="#projects" className="text-gray-600 dark:text-zinc-400 hover:text-gray-900 dark:hover:text-zinc-100 transition-colors text-sm font-medium uppercase tracking-wide" aria-label="Navigate to Work section">
                   Work
                 </a>
-                <a href="#skills" className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium uppercase tracking-wide" aria-label="Navigate to Skills section">
+                <a href="#skills" className="text-gray-600 dark:text-zinc-400 hover:text-gray-900 dark:hover:text-zinc-100 transition-colors text-sm font-medium uppercase tracking-wide" aria-label="Navigate to Skills section">
                 Skills
                 </a>
-                <a href="#contact" className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium uppercase tracking-wide" aria-label="Navigate to Contact section">
+                <a href="#contact" className="text-gray-600 dark:text-zinc-400 hover:text-gray-900 dark:hover:text-zinc-100 transition-colors text-sm font-medium uppercase tracking-wide" aria-label="Navigate to Contact section">
                 Contact
                 </a>
-                <a href="#contact" className="inline-flex items-center px-5 py-2.5 bg-gray-900 text-white text-sm font-semibold rounded-sm hover:bg-gray-800 transition-colors" aria-label="Get in touch">
+                <a href="#contact" className="inline-flex items-center px-5 py-2.5 bg-gray-900 dark:bg-white text-white dark:text-gray-900 text-sm font-semibold rounded-sm hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors" aria-label="Get in touch">
                   Get in Touch
                 </a>
                 <ThemeToggle />
@@ -254,21 +254,21 @@ const Home: NextPage = () => {
       </nav>
 
       {/* Hero - dotlogics style: one headline + one CTA */}
-      <section id="main-content" className="relative min-h-[85vh] flex items-center justify-center py-24 px-6 bg-white">
+      <section id="main-content" className="relative min-h-[85vh] flex items-center justify-center py-24 px-6 bg-white dark:bg-zinc-900">
         <div className="max-w-4xl mx-auto text-center">
-          <p className={`text-sm uppercase tracking-widest text-gray-500 mb-4 ${styles['animate-fade-in']}`}>
+          <p className={`text-sm uppercase tracking-widest text-gray-500 dark:text-zinc-500 mb-4 ${styles['animate-fade-in']}`}>
             Data Scientist · ML & AI · Data Engineering
           </p>
-          <h1 className={`text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 tracking-tight leading-tight mb-6 ${styles['animate-fade-in']}`}>
+          <h1 className={`text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-zinc-100 tracking-tight leading-tight mb-6 ${styles['animate-fade-in']}`}>
             I Build Data & AI Systems That Drive Impact
           </h1>
-          <p className={`text-xl text-gray-600 max-w-2xl mx-auto mb-10 ${styles['animate-fade-in']}`}>
+          <p className={`text-xl text-gray-600 dark:text-zinc-400 max-w-2xl mx-auto mb-10 ${styles['animate-fade-in']}`}>
             From machine learning models to data pipelines and analytics—I help turn complex data into clear, actionable outcomes.
           </p>
           <div className={styles['animate-fade-in-up']}>
             <Link
               href="#contact"
-              className="inline-flex items-center px-8 py-4 bg-gray-900 text-white font-semibold rounded-sm hover:bg-gray-800 transition-colors"
+              className="inline-flex items-center px-8 py-4 bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-semibold rounded-sm hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
             >
               Get in Touch
               <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -280,52 +280,52 @@ const Home: NextPage = () => {
       </section>
 
       {/* How I Help - dotlogics-style 3 service cards */}
-      <section id="how-i-help" className="relative w-full bg-[#fafafa] py-20" style={{ scrollMarginTop: '80px' }}>
+      <section id="how-i-help" className="relative w-full bg-[#fafafa] dark:bg-zinc-950 py-20" style={{ scrollMarginTop: '80px' }}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">How I Help</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-zinc-100 mb-12 text-center">How I Help</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <a href="#projects" className="group block bg-white border border-gray-200 rounded-lg p-8 hover:border-gray-300 hover:shadow-lg transition-all duration-300">
-              <div className="w-12 h-12 rounded-lg bg-gray-100 flex items-center justify-center mb-6 group-hover:bg-gray-900 transition-colors">
-                <svg className="w-6 h-6 text-gray-700 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+            <a href="#projects" className="group block bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 rounded-lg p-8 hover:border-gray-300 hover:shadow-lg transition-all duration-300">
+              <div className="w-12 h-12 rounded-lg bg-gray-100 dark:bg-zinc-800 flex items-center justify-center mb-6 group-hover:bg-gray-900 transition-colors">
+                <svg className="w-6 h-6 text-gray-700 dark:text-zinc-300 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Data & Machine Learning</h3>
-              <p className="text-gray-600 leading-relaxed">Designing and building ML models and analytics that turn data into decisions—from forecasting to classification and NLP.</p>
-              <span className="inline-flex items-center mt-4 text-gray-900 font-medium text-sm group-hover:underline">View work →</span>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-zinc-100 mb-3">Data & Machine Learning</h3>
+              <p className="text-gray-600 dark:text-zinc-400 leading-relaxed">Designing and building ML models and analytics that turn data into decisions—from forecasting to classification and NLP.</p>
+              <span className="inline-flex items-center mt-4 text-gray-900 dark:text-zinc-100 font-medium text-sm group-hover:underline">View work →</span>
             </a>
-            <a href="#projects" className="group block bg-white border border-gray-200 rounded-lg p-8 hover:border-gray-300 hover:shadow-lg transition-all duration-300">
-              <div className="w-12 h-12 rounded-lg bg-gray-100 flex items-center justify-center mb-6 group-hover:bg-gray-900 transition-colors">
-                <svg className="w-6 h-6 text-gray-700 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2 1 3 3 3h10c2 0 3-1 3-3V7c0-2-1-3-3-3H7c-2 0-3 1-3 3z" /></svg>
+            <a href="#projects" className="group block bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 rounded-lg p-8 hover:border-gray-300 hover:shadow-lg transition-all duration-300">
+              <div className="w-12 h-12 rounded-lg bg-gray-100 dark:bg-zinc-800 flex items-center justify-center mb-6 group-hover:bg-gray-900 transition-colors">
+                <svg className="w-6 h-6 text-gray-700 dark:text-zinc-300 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2 1 3 3 3h10c2 0 3-1 3-3V7c0-2-1-3-3-3H7c-2 0-3 1-3 3z" /></svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Data Engineering & Pipelines</h3>
-              <p className="text-gray-600 leading-relaxed">Creating scalable data pipelines and ETL workflows so teams can rely on clean, timely data.</p>
-              <span className="inline-flex items-center mt-4 text-gray-900 font-medium text-sm group-hover:underline">View work →</span>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-zinc-100 mb-3">Data Engineering & Pipelines</h3>
+              <p className="text-gray-600 dark:text-zinc-400 leading-relaxed">Creating scalable data pipelines and ETL workflows so teams can rely on clean, timely data.</p>
+              <span className="inline-flex items-center mt-4 text-gray-900 dark:text-zinc-100 font-medium text-sm group-hover:underline">View work →</span>
             </a>
-            <a href="#projects" className="group block bg-white border border-gray-200 rounded-lg p-8 hover:border-gray-300 hover:shadow-lg transition-all duration-300">
-              <div className="w-12 h-12 rounded-lg bg-gray-100 flex items-center justify-center mb-6 group-hover:bg-gray-900 transition-colors">
-                <svg className="w-6 h-6 text-gray-700 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+            <a href="#projects" className="group block bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 rounded-lg p-8 hover:border-gray-300 hover:shadow-lg transition-all duration-300">
+              <div className="w-12 h-12 rounded-lg bg-gray-100 dark:bg-zinc-800 flex items-center justify-center mb-6 group-hover:bg-gray-900 transition-colors">
+                <svg className="w-6 h-6 text-gray-700 dark:text-zinc-300 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">AI & Automation</h3>
-              <p className="text-gray-600 leading-relaxed">Replacing repetitive processes with smart automation and AI-driven solutions for clearer, faster outcomes.</p>
-              <span className="inline-flex items-center mt-4 text-gray-900 font-medium text-sm group-hover:underline">View work →</span>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-zinc-100 mb-3">AI & Automation</h3>
+              <p className="text-gray-600 dark:text-zinc-400 leading-relaxed">Replacing repetitive processes with smart automation and AI-driven solutions for clearer, faster outcomes.</p>
+              <span className="inline-flex items-center mt-4 text-gray-900 dark:text-zinc-100 font-medium text-sm group-hover:underline">View work →</span>
             </a>
           </div>
         </div>
       </section>
 
       {/* About Section - dotlogics style: light, clean */}
-      <section id="about" className="relative w-full bg-white flex flex-col items-center justify-center py-20" style={{ scrollMarginTop: '80px' }}>
+      <section id="about" className="relative w-full bg-white dark:bg-zinc-900 flex flex-col items-center justify-center py-20" style={{ scrollMarginTop: '80px' }}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">About</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-zinc-100 mb-12 text-center">About</h2>
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="space-y-6 order-2 md:order-1">
-              <div className="bg-gray-50 rounded-xl p-8 border border-gray-100">
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <div className="bg-gray-50 dark:bg-zinc-800/40 rounded-xl p-8 border border-gray-100 dark:border-zinc-800">
+              <p className="text-lg text-gray-600 dark:text-zinc-400 leading-relaxed">
                 Data Scientist with over 3 years of experience in building machine learning models, developing data pipelines, and extracting insights
                 from complex datasets. Expertise in supervised and unsupervised learning, deep learning, and natural language processing.
               </p>
               </div>
-              <div className="bg-gray-50 rounded-xl p-8 border border-gray-100">
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <div className="bg-gray-50 dark:bg-zinc-800/40 rounded-xl p-8 border border-gray-100 dark:border-zinc-800">
+              <p className="text-lg text-gray-600 dark:text-zinc-400 leading-relaxed">
                 Skilled in Python, SQL, and cloud-based data engineering solutions. Proven ability to design scalable AI models, optimize ETL workflows, and
                 deploy data-driven solutions that enhance business decision-making.
               </p>
@@ -341,9 +341,9 @@ const Home: NextPage = () => {
       </section>
 
       {/* Contents - simple jump links (dotlogics-style minimal) */}
-      <section id="contents" className="relative w-full bg-[#fafafa] py-12 flex flex-col items-center justify-center">
+      <section id="contents" className="relative w-full bg-[#fafafa] dark:bg-zinc-950 py-12 flex flex-col items-center justify-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">On this page</h2>
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-zinc-100 mb-6">On this page</h2>
           <GlassIcons
             items={[
               {
@@ -425,40 +425,40 @@ const Home: NextPage = () => {
       </section>
 
       {/* Education Section - light */}
-      <section id="education" className="relative w-full bg-white py-20" style={{ scrollMarginTop: '80px' }}>
+      <section id="education" className="relative w-full bg-white dark:bg-zinc-900 py-20" style={{ scrollMarginTop: '80px' }}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">Education</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-zinc-100 mb-12 text-center">Education</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {/* Masters Degree */}
-            <div className="group bg-gray-50 rounded-xl p-8 md:p-10 border border-gray-100 hover:border-gray-200 hover:shadow-md transition-all duration-300">
+            <div className="group bg-gray-50 dark:bg-zinc-800/40 rounded-xl p-8 md:p-10 border border-gray-100 dark:border-zinc-800 hover:border-gray-200 hover:shadow-md transition-all duration-300">
               <div className="space-y-6">
                 <div className="flex items-start justify-between">
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Master of Science in Data Science</h3>
-                  <p className="text-lg text-gray-600 mb-2">New Jersey Institute of Technology (NJIT)</p>
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-zinc-100 mb-2">Master of Science in Data Science</h3>
+                  <p className="text-lg text-gray-600 dark:text-zinc-400 mb-2">New Jersey Institute of Technology (NJIT)</p>
                   </div>
                   <div className="flex flex-col items-end">
-                    <p className="text-gray-500 text-sm">Jan&apos;23 - Dec&apos;24</p>
+                    <p className="text-gray-500 dark:text-zinc-500 text-sm">Jan&apos;23 - Dec&apos;24</p>
                     <span className="text-emerald-600 font-semibold text-sm">GPA: 3.95</span>
                   </div>
                 </div>
                 <div className="mt-6 space-y-4">
-                    <div className="space-y-2 text-gray-600">
+                    <div className="space-y-2 text-gray-600 dark:text-zinc-400">
                     <p className="flex items-center"><span className="inline-block w-2 h-2 bg-gray-400 rounded-full mr-3"></span>Specialized in advanced analytics, machine learning, and data engineering</p>
                     <p className="flex items-center"><span className="inline-block w-2 h-2 bg-gray-400 rounded-full mr-3"></span>Focused on developing scalable solutions for real-world data challenges</p>
                     <p className="flex items-center"><span className="inline-block w-2 h-2 bg-gray-400 rounded-full mr-3"></span>Applied AI/ML techniques to solve complex business problems</p>
                     </div>
-                  <div className="pt-6 border-t border-gray-200">
-                    <p className="text-gray-700 font-medium mb-4">Relevant Coursework:</p>
+                  <div className="pt-6 border-t border-gray-200 dark:border-zinc-800">
+                    <p className="text-gray-700 dark:text-zinc-300 font-medium mb-4">Relevant Coursework:</p>
                       <div className="flex flex-wrap gap-3">
-                      <span className="px-3 py-1.5 bg-white rounded-lg text-gray-700 text-sm border border-gray-200">Big Data</span>
-                      <span className="px-3 py-1.5 bg-white rounded-lg text-gray-700 text-sm border border-gray-200">Machine Learning</span>
-                      <span className="px-3 py-1.5 bg-white rounded-lg text-gray-700 text-sm border border-gray-200">Deep Learning</span>
-                      <span className="px-3 py-1.5 bg-white rounded-lg text-gray-700 text-sm border border-gray-200">Cloud Computing</span>
-                      <span className="px-3 py-1.5 bg-white rounded-lg text-gray-700 text-sm border border-gray-200">Data Visualization</span>
-                      <span className="px-3 py-1.5 bg-white rounded-lg text-gray-700 text-sm border border-gray-200">Data Mining</span>
-                      <span className="px-3 py-1.5 bg-white rounded-lg text-gray-700 text-sm border border-gray-200">Statistics</span>
-                      <span className="px-3 py-1.5 bg-white rounded-lg text-gray-700 text-sm border border-gray-200">R</span>
+                      <span className="px-3 py-1.5 bg-white dark:bg-zinc-900 rounded-lg text-gray-700 dark:text-zinc-300 text-sm border border-gray-200 dark:border-zinc-800">Big Data</span>
+                      <span className="px-3 py-1.5 bg-white dark:bg-zinc-900 rounded-lg text-gray-700 dark:text-zinc-300 text-sm border border-gray-200 dark:border-zinc-800">Machine Learning</span>
+                      <span className="px-3 py-1.5 bg-white dark:bg-zinc-900 rounded-lg text-gray-700 dark:text-zinc-300 text-sm border border-gray-200 dark:border-zinc-800">Deep Learning</span>
+                      <span className="px-3 py-1.5 bg-white dark:bg-zinc-900 rounded-lg text-gray-700 dark:text-zinc-300 text-sm border border-gray-200 dark:border-zinc-800">Cloud Computing</span>
+                      <span className="px-3 py-1.5 bg-white dark:bg-zinc-900 rounded-lg text-gray-700 dark:text-zinc-300 text-sm border border-gray-200 dark:border-zinc-800">Data Visualization</span>
+                      <span className="px-3 py-1.5 bg-white dark:bg-zinc-900 rounded-lg text-gray-700 dark:text-zinc-300 text-sm border border-gray-200 dark:border-zinc-800">Data Mining</span>
+                      <span className="px-3 py-1.5 bg-white dark:bg-zinc-900 rounded-lg text-gray-700 dark:text-zinc-300 text-sm border border-gray-200 dark:border-zinc-800">Statistics</span>
+                      <span className="px-3 py-1.5 bg-white dark:bg-zinc-900 rounded-lg text-gray-700 dark:text-zinc-300 text-sm border border-gray-200 dark:border-zinc-800">R</span>
                     </div>
                   </div>
                 </div>
@@ -466,27 +466,27 @@ const Home: NextPage = () => {
             </div>
 
             {/* Bachelors Degree */}
-            <div className="group bg-gray-50 rounded-xl p-8 md:p-10 border border-gray-100 hover:border-gray-200 hover:shadow-md transition-all duration-300">
+            <div className="group bg-gray-50 dark:bg-zinc-800/40 rounded-xl p-8 md:p-10 border border-gray-100 dark:border-zinc-800 hover:border-gray-200 hover:shadow-md transition-all duration-300">
               <div className="space-y-6">
                 <div className="flex items-start justify-between">
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Bachelor of Technology in Mechanical Engineering</h3>
-                    <p className="text-lg text-gray-600 mb-2">BML Munjal University, New Delhi, India</p>
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-zinc-100 mb-2">Bachelor of Technology in Mechanical Engineering</h3>
+                    <p className="text-lg text-gray-600 dark:text-zinc-400 mb-2">BML Munjal University, New Delhi, India</p>
                   </div>
                   <div className="flex flex-col items-end">
-                    <p className="text-gray-500 text-sm whitespace-nowrap">Aug&apos;17-Aug&apos;21</p>
+                    <p className="text-gray-500 dark:text-zinc-500 text-sm whitespace-nowrap">Aug&apos;17-Aug&apos;21</p>
                     <span className="text-emerald-600 font-semibold text-sm">GPA: 3.5</span>
                   </div>
                 </div>
                 <div className="mt-6 space-y-4">
-                  <div className="space-y-2 text-gray-600">
+                  <div className="space-y-2 text-gray-600 dark:text-zinc-400">
                     <p className="flex items-center"><span className="inline-block w-2 h-2 bg-gray-400 rounded-full mr-3"></span>Received academic scholarship for outstanding performance</p>
                     <p className="flex items-center"><span className="inline-block w-2 h-2 bg-gray-400 rounded-full mr-3"></span>Sports Coordinator, Hero Challenge Fest (Jan-Feb 2018)</p>
                     <p className="flex items-center"><span className="inline-block w-2 h-2 bg-gray-400 rounded-full mr-3"></span>Sports Representative Head, Banyan League (Jan-Feb 2019)</p>
                   </div>
-                  <div className="pt-6 border-t border-gray-200">
-                    <p className="text-gray-700 font-medium mb-4">Key Achievements:</p>
-                    <div className="space-y-3 text-sm text-gray-600">
+                  <div className="pt-6 border-t border-gray-200 dark:border-zinc-800">
+                    <p className="text-gray-700 dark:text-zinc-300 font-medium mb-4">Key Achievements:</p>
+                    <div className="space-y-3 text-sm text-gray-600 dark:text-zinc-400">
                       <p className="flex items-start"><span className="inline-block w-1.5 h-1.5 bg-gray-400 rounded-full mr-3 mt-1.5"></span>Managed logistics for multiple teams, overseeing transportation, deliveries, inventory, and supply chain processes</p>
                       <p className="flex items-start"><span className="inline-block w-1.5 h-1.5 bg-gray-400 rounded-full mr-3 mt-1.5"></span>Collaborated with cross-functional stakeholders to optimize workflows and enhance team productivity</p>
                     </div>
@@ -499,11 +499,11 @@ const Home: NextPage = () => {
       </section>
 
       {/* That One Excel Sheet Section - light */}
-      <section id="excel-story" className="relative w-full bg-[#fafafa] py-20" style={{ scrollMarginTop: '80px' }}>
+      <section id="excel-story" className="relative w-full bg-[#fafafa] dark:bg-zinc-950 py-20" style={{ scrollMarginTop: '80px' }}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row-reverse items-center gap-12">
           <div className="flex-1 text-left md:max-w-lg md:ml-8 flex flex-col justify-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">That One Excel Sheet</h2>
-            <div className="text-lg text-gray-600 leading-relaxed space-y-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-zinc-100 mb-6">That One Excel Sheet</h2>
+            <div className="text-lg text-gray-600 dark:text-zinc-400 leading-relaxed space-y-6">
               <p>Now you might wonder, why the heck did I shift my career from mechanical to data?</p>
               <p>Ngl, that&apos;s what my parents wondered too.</p>
               <p>It all started with that one Excel sheet. That one regression equation.</p>
@@ -513,66 +513,66 @@ const Home: NextPage = () => {
             </div>
           </div>
           <div className="flex-1 flex justify-center items-center">
-            <Image src="/m2d.png" alt="Mechanical to Data" width={700} height={700} className="max-w-2xl w-full rounded-xl shadow-lg object-contain border border-gray-100" />
+            <Image src="/m2d.png" alt="Mechanical to Data" width={700} height={700} className="max-w-2xl w-full rounded-xl shadow-lg object-contain border border-gray-100 dark:border-zinc-800" />
           </div>
         </div>
       </section>
 
       {/* Work / Projects - dotlogics "Recent Success Stories" style */}
-      <section id="projects" className="relative w-full bg-white py-20" style={{ scrollMarginTop: '80px' }}>
+      <section id="projects" className="relative w-full bg-white dark:bg-zinc-900 py-20" style={{ scrollMarginTop: '80px' }}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">Work & Projects</h2>
-            <p className="text-gray-600 text-center max-w-xl">Selected experience and case studies</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-zinc-100 mb-2">Work & Projects</h2>
+            <p className="text-gray-600 dark:text-zinc-400 text-center max-w-xl">Selected experience and case studies</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Verizon Project Card - light dotlogics style */}
-            <div className="group relative bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg hover:border-gray-300 transition-all duration-300 cursor-pointer">
-              <div className="aspect-video bg-gray-100 relative">
+            <div className="group relative bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 rounded-lg overflow-hidden hover:shadow-lg hover:border-gray-300 transition-all duration-300 cursor-pointer">
+              <div className="aspect-video bg-gray-100 dark:bg-zinc-800 relative">
                 <Image src="/verizon-v.png" alt="Verizon Logo" fill className="object-contain p-4 opacity-80 group-hover:opacity-100 transition-opacity" />
               </div>
               <div className="p-6 flex flex-col">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Verizon Capstone Project</h3>
-                <p className="text-gray-600 text-sm mb-4">Advanced fault detection system using ML. Processed 50GB+ logs with XGBoost; Tableau dashboards for real-time monitoring.</p>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-zinc-100 mb-2">Verizon Capstone Project</h3>
+                <p className="text-gray-600 dark:text-zinc-400 text-sm mb-4">Advanced fault detection system using ML. Processed 50GB+ logs with XGBoost; Tableau dashboards for real-time monitoring.</p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="px-2.5 py-1 bg-gray-100 rounded text-xs text-gray-700">XGBoost</span>
-                  <span className="px-2.5 py-1 bg-gray-100 rounded text-xs text-gray-700">Tableau</span>
-                  <span className="px-2.5 py-1 bg-gray-100 rounded text-xs text-gray-700">ML</span>
+                  <span className="px-2.5 py-1 bg-gray-100 dark:bg-zinc-800 rounded text-xs text-gray-700 dark:text-zinc-300">XGBoost</span>
+                  <span className="px-2.5 py-1 bg-gray-100 dark:bg-zinc-800 rounded text-xs text-gray-700 dark:text-zinc-300">Tableau</span>
+                  <span className="px-2.5 py-1 bg-gray-100 dark:bg-zinc-800 rounded text-xs text-gray-700 dark:text-zinc-300">ML</span>
                 </div>
-                <span className="text-gray-900 font-medium text-sm group-hover:underline">Read more →</span>
+                <span className="text-gray-900 dark:text-zinc-100 font-medium text-sm group-hover:underline">Read more →</span>
               </div>
             </div>
 
             {/* Kansas City Crimes */}
-            <Link href="https://github.com/nikhilgouthamb/Kansas-City-Crimes-Visualization-and-Analysis" target="_blank" rel="noopener noreferrer" className="block group bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg hover:border-gray-300 transition-all duration-300">
-              <div className="aspect-video bg-gray-100 relative">
+            <Link href="https://github.com/nikhilgouthamb/Kansas-City-Crimes-Visualization-and-Analysis" target="_blank" rel="noopener noreferrer" className="block group bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 rounded-lg overflow-hidden hover:shadow-lg hover:border-gray-300 transition-all duration-300">
+              <div className="aspect-video bg-gray-100 dark:bg-zinc-800 relative">
                 <Image src="/kansas-city-crime.jpg" alt="Kansas City Crime Analysis" fill className="object-cover opacity-90 group-hover:opacity-100 transition-opacity" />
               </div>
               <div className="p-6 flex flex-col">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Kansas City Crime Analysis</h3>
-                <p className="text-gray-600 text-sm mb-4">Interactive Tableau dashboard for crime data 2016–2022: COVID impact, hotspots, demographics.</p>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-zinc-100 mb-2">Kansas City Crime Analysis</h3>
+                <p className="text-gray-600 dark:text-zinc-400 text-sm mb-4">Interactive Tableau dashboard for crime data 2016–2022: COVID impact, hotspots, demographics.</p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="px-2.5 py-1 bg-gray-100 rounded text-xs text-gray-700">Tableau</span>
-                  <span className="px-2.5 py-1 bg-gray-100 rounded text-xs text-gray-700">Data Analysis</span>
-                  <span className="px-2.5 py-1 bg-gray-100 rounded text-xs text-gray-700">Visualization</span>
+                  <span className="px-2.5 py-1 bg-gray-100 dark:bg-zinc-800 rounded text-xs text-gray-700 dark:text-zinc-300">Tableau</span>
+                  <span className="px-2.5 py-1 bg-gray-100 dark:bg-zinc-800 rounded text-xs text-gray-700 dark:text-zinc-300">Data Analysis</span>
+                  <span className="px-2.5 py-1 bg-gray-100 dark:bg-zinc-800 rounded text-xs text-gray-700 dark:text-zinc-300">Visualization</span>
                 </div>
-                <span className="text-gray-900 font-medium text-sm group-hover:underline">View project →</span>
+                <span className="text-gray-900 dark:text-zinc-100 font-medium text-sm group-hover:underline">View project →</span>
               </div>
             </Link>
 
             {/* R Web Scraping */}
-            <Link href="https://github.com/nikhilgouthamb/Web-scraping-using-R" target="_blank" rel="noopener noreferrer" className="block group bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg hover:border-gray-300 transition-all duration-300">
-              <div className="aspect-video bg-gray-100 relative">
+            <Link href="https://github.com/nikhilgouthamb/Web-scraping-using-R" target="_blank" rel="noopener noreferrer" className="block group bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 rounded-lg overflow-hidden hover:shadow-lg hover:border-gray-300 transition-all duration-300">
+              <div className="aspect-video bg-gray-100 dark:bg-zinc-800 relative">
                 <Image src="/r-web-scraping.jpg" alt="R Web Scraping Project" fill className="object-cover opacity-90 group-hover:opacity-100 transition-opacity" />
               </div>
               <div className="p-6 flex flex-col">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Web Scraping with R</h3>
-                <p className="text-gray-600 text-sm mb-4">Automated extraction from Genome Biology articles: titles, authors, abstracts, full text.</p>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-zinc-100 mb-2">Web Scraping with R</h3>
+                <p className="text-gray-600 dark:text-zinc-400 text-sm mb-4">Automated extraction from Genome Biology articles: titles, authors, abstracts, full text.</p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="px-2.5 py-1 bg-gray-100 rounded text-xs text-gray-700">R</span>
-                  <span className="px-2.5 py-1 bg-gray-100 rounded text-xs text-gray-700">Web Scraping</span>
+                  <span className="px-2.5 py-1 bg-gray-100 dark:bg-zinc-800 rounded text-xs text-gray-700 dark:text-zinc-300">R</span>
+                  <span className="px-2.5 py-1 bg-gray-100 dark:bg-zinc-800 rounded text-xs text-gray-700 dark:text-zinc-300">Web Scraping</span>
                 </div>
-                <span className="text-gray-900 font-medium text-sm group-hover:underline">View project →</span>
+                <span className="text-gray-900 dark:text-zinc-100 font-medium text-sm group-hover:underline">View project →</span>
               </div>
             </Link>
 
@@ -868,9 +868,9 @@ const Home: NextPage = () => {
       </section>
 
       {/* Skills Section - light */}
-      <section id="skills" className="relative w-full bg-[#fafafa] py-20" style={{ scrollMarginTop: '80px' }}>
+      <section id="skills" className="relative w-full bg-[#fafafa] dark:bg-zinc-950 py-20" style={{ scrollMarginTop: '80px' }}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">Skills & Technologies</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-zinc-100 mb-12 text-center">Skills & Technologies</h2>
           <div className="flex justify-center">
             <MagicBento
               textAutoHide={true}
@@ -889,11 +889,11 @@ const Home: NextPage = () => {
       </section>
 
       {/* Data Meets Climate - light */}
-      <section id="data-meets-climate" className="relative w-full bg-white py-20" style={{ scrollMarginTop: '80px' }}>
+      <section id="data-meets-climate" className="relative w-full bg-white dark:bg-zinc-900 py-20" style={{ scrollMarginTop: '80px' }}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">Data Meets Climate</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-zinc-100 mb-4 text-center">Data Meets Climate</h2>
           <div className="max-w-2xl mx-auto mb-10">
-            <p className="text-lg text-gray-600 text-center">
+            <p className="text-lg text-gray-600 dark:text-zinc-400 text-center">
               I&apos;ve been trying to pivot into climate-focused work. I&apos;d love to explore if there might be any data-related roles or upcoming needs, happy to contribute in any capacity. I&apos;m eager to learn and would love to explore new domains.
             </p>
           </div>
@@ -904,18 +904,18 @@ const Home: NextPage = () => {
       </section>
 
       {/* Resume Section - light */}
-      <section id="resume" className="py-20 px-6 relative bg-[#fafafa]" style={{ scrollMarginTop: '80px' }}>
+      <section id="resume" className="py-20 px-6 relative bg-[#fafafa] dark:bg-zinc-950" style={{ scrollMarginTop: '80px' }}>
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-gray-900">Want to see my resume?</h2>
-          <div className="bg-white rounded-xl p-8 border border-gray-200 shadow-sm">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-gray-900 dark:text-zinc-100">Want to see my resume?</h2>
+          <div className="bg-white dark:bg-zinc-900 rounded-xl p-8 border border-gray-200 dark:border-zinc-800 shadow-sm">
             <div className="text-center space-y-6">
-              <p className="text-xl text-gray-700">
+              <p className="text-xl text-gray-700 dark:text-zinc-300">
                 Plot twist: My resume is like a tech startup—<span className="italic">constantly iterating and shipping new features!</span>
               </p>
-              <p className="text-gray-600">
+              <p className="text-gray-600 dark:text-zinc-400">
                 Drop me a line for the latest version—it might have changed while you were reading this! 😄
               </p>
-              <Link href="#contact" className="inline-block px-8 py-3 bg-gray-900 text-white font-semibold rounded-sm hover:bg-gray-800 transition-colors">
+              <Link href="#contact" className="inline-block px-8 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-semibold rounded-sm hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors">
                 Request Latest Build v{new Date().toISOString().split('T')[0]} →
               </Link>
             </div>
@@ -924,28 +924,28 @@ const Home: NextPage = () => {
       </section>
 
       {/* Contact Section - light dotlogics style */}
-      <section id="contact" className="relative w-full bg-white py-20" style={{ scrollMarginTop: '80px' }}>
+      <section id="contact" className="relative w-full bg-white dark:bg-zinc-900 py-20" style={{ scrollMarginTop: '80px' }}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Get in Touch</h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-zinc-100 mb-4">Get in Touch</h2>
+            <p className="text-gray-600 dark:text-zinc-400 text-lg max-w-2xl mx-auto">
               Have a question or want to work together? I&apos;d love to hear from you.
             </p>
           </div>
 
-          <div className="bg-gray-50 rounded-xl p-8 md:p-10 border border-gray-200">
+          <div className="bg-gray-50 dark:bg-zinc-800/40 rounded-xl p-8 md:p-10 border border-gray-200 dark:border-zinc-800">
             <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">Name</label>
-                <input type="text" id="name" name="name" className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent text-gray-900 placeholder-gray-400" placeholder="Your name" required disabled={isSubmitting} />
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-zinc-300 mb-2">Name</label>
+                <input type="text" id="name" name="name" className="w-full px-4 py-3 bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent text-gray-900 dark:text-zinc-100 placeholder-gray-400" placeholder="Your name" required disabled={isSubmitting} />
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                <input type="email" id="email" name="email" className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent text-gray-900 placeholder-gray-400" placeholder="your@email.com" required disabled={isSubmitting} />
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-zinc-300 mb-2">Email</label>
+                <input type="email" id="email" name="email" className="w-full px-4 py-3 bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent text-gray-900 dark:text-zinc-100 placeholder-gray-400" placeholder="your@email.com" required disabled={isSubmitting} />
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                <textarea id="message" name="message" rows={5} className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent text-gray-900 placeholder-gray-400" placeholder="Your message here..." required disabled={isSubmitting}></textarea>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-zinc-300 mb-2">Message</label>
+                <textarea id="message" name="message" rows={5} className="w-full px-4 py-3 bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent text-gray-900 dark:text-zinc-100 placeholder-gray-400" placeholder="Your message here..." required disabled={isSubmitting}></textarea>
               </div>
               {submitStatus.type && (
                 <div className={`p-4 rounded-lg ${submitStatus.type === 'success' ? 'bg-green-50 text-green-800 border border-green-200' : 'bg-red-50 text-red-800 border border-red-200'}`} role="alert">
@@ -953,7 +953,7 @@ const Home: NextPage = () => {
                 </div>
               )}
               <div className="flex justify-end">
-                <button type="submit" disabled={isSubmitting} className="px-8 py-3 bg-gray-900 text-white font-semibold rounded-sm hover:bg-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed">
+                <button type="submit" disabled={isSubmitting} className="px-8 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-semibold rounded-sm hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed">
                   {isSubmitting ? (
                     <span className="flex items-center">
                       <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
@@ -970,9 +970,9 @@ const Home: NextPage = () => {
       </section>
 
       {/* Find Me Here - light */}
-      <section id="social" className="relative w-full bg-[#fafafa] py-20" style={{ scrollMarginTop: '80px' }}>
+      <section id="social" className="relative w-full bg-[#fafafa] dark:bg-zinc-950 py-20" style={{ scrollMarginTop: '80px' }}>
         <div className="flex flex-col items-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Find Me Here</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-zinc-100 mb-4">Find Me Here</h2>
         </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <GlassIcons
@@ -1040,21 +1040,21 @@ const Home: NextPage = () => {
       </section>
 
       {/* Future Goals & Interests - light */}
-      <section id="goals" className="relative w-full bg-white py-20">
+      <section id="goals" className="relative w-full bg-white dark:bg-zinc-900 py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">Future Goals & Interests</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-zinc-100 mb-12 text-center">Future Goals & Interests</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Climate Tech */}
-            <div className="group bg-gray-50 rounded-xl p-8 border border-gray-100 hover:border-gray-200 hover:shadow-md transition-all duration-300">
+            <div className="group bg-gray-50 dark:bg-zinc-800/40 rounded-xl p-8 border border-gray-100 dark:border-zinc-800 hover:border-gray-200 hover:shadow-md transition-all duration-300">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-12 rounded-lg bg-green-100 flex items-center justify-center">
                   <svg className="w-6 h-6 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900">Climate Tech</h3>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-zinc-100">Climate Tech</h3>
               </div>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 dark:text-zinc-400 leading-relaxed">
                 Passionate about leveraging data science for climate action and sustainability. 
                 Experienced in energy optimization projects that reduced consumption by 15-23%. 
                 Seeking opportunities in climate tech and environmental data science.
@@ -1062,16 +1062,16 @@ const Home: NextPage = () => {
             </div>
 
             {/* AI/ML Advancement */}
-            <div className="group bg-gray-50 rounded-xl p-8 border border-gray-100 hover:border-gray-200 hover:shadow-md transition-all duration-300">
+            <div className="group bg-gray-50 dark:bg-zinc-800/40 rounded-xl p-8 border border-gray-100 dark:border-zinc-800 hover:border-gray-200 hover:shadow-md transition-all duration-300">
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 rounded-lg bg-gray-200 flex items-center justify-center">
-                  <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-12 h-12 rounded-lg bg-gray-200 dark:bg-zinc-700 flex items-center justify-center">
+                  <svg className="w-6 h-6 text-gray-700 dark:text-zinc-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900">AI/ML Advancement</h3>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-zinc-100">AI/ML Advancement</h3>
               </div>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 dark:text-zinc-400 leading-relaxed">
                 Continuously exploring cutting-edge machine learning techniques, 
                 deep learning architectures, and emerging AI technologies. 
                 Focused on developing scalable, ethical AI solutions.
@@ -1079,16 +1079,16 @@ const Home: NextPage = () => {
             </div>
 
             {/* Data Engineering */}
-            <div className="group bg-gray-50 rounded-xl p-8 border border-gray-100 hover:border-gray-200 hover:shadow-md transition-all duration-300">
+            <div className="group bg-gray-50 dark:bg-zinc-800/40 rounded-xl p-8 border border-gray-100 dark:border-zinc-800 hover:border-gray-200 hover:shadow-md transition-all duration-300">
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 rounded-lg bg-gray-200 flex items-center justify-center">
-                  <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-12 h-12 rounded-lg bg-gray-200 dark:bg-zinc-700 flex items-center justify-center">
+                  <svg className="w-6 h-6 text-gray-700 dark:text-zinc-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 7v10c0 2 1 3 3 3h10c2 0 3-1 3-3V7c0-2-1-3-3-3H7c-2 0-3 1-3 3z M8 4v4 M16 4v4 M4 11h16" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900">Data Engineering</h3>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-zinc-100">Data Engineering</h3>
               </div>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 dark:text-zinc-400 leading-relaxed">
                 Building robust, scalable data pipelines and infrastructure. 
                 Expertise in cloud platforms, real-time processing, and 
                 data architecture design for enterprise solutions.
@@ -1096,16 +1096,16 @@ const Home: NextPage = () => {
             </div>
 
             {/* Healthcare Analytics */}
-            <div className="group bg-gray-50 rounded-xl p-8 border border-gray-100 hover:border-gray-200 hover:shadow-md transition-all duration-300">
+            <div className="group bg-gray-50 dark:bg-zinc-800/40 rounded-xl p-8 border border-gray-100 dark:border-zinc-800 hover:border-gray-200 hover:shadow-md transition-all duration-300">
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 rounded-lg bg-gray-200 flex items-center justify-center">
-                  <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-12 h-12 rounded-lg bg-gray-200 dark:bg-zinc-700 flex items-center justify-center">
+                  <svg className="w-6 h-6 text-gray-700 dark:text-zinc-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900">Healthcare Analytics</h3>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-zinc-100">Healthcare Analytics</h3>
               </div>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 dark:text-zinc-400 leading-relaxed">
                 Applying data science to healthcare challenges, from disease prediction 
                 to patient outcome analysis. Committed to improving healthcare 
                 through data-driven insights and predictive modeling.
@@ -1113,16 +1113,16 @@ const Home: NextPage = () => {
             </div>
 
             {/* Open Source */}
-            <div className="group bg-gray-50 rounded-xl p-8 border border-gray-100 hover:border-gray-200 hover:shadow-md transition-all duration-300">
+            <div className="group bg-gray-50 dark:bg-zinc-800/40 rounded-xl p-8 border border-gray-100 dark:border-zinc-800 hover:border-gray-200 hover:shadow-md transition-all duration-300">
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 rounded-lg bg-gray-200 flex items-center justify-center">
-                  <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-12 h-12 rounded-lg bg-gray-200 dark:bg-zinc-700 flex items-center justify-center">
+                  <svg className="w-6 h-6 text-gray-700 dark:text-zinc-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900">Open Source</h3>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-zinc-100">Open Source</h3>
               </div>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 dark:text-zinc-400 leading-relaxed">
                 Contributing to the data science community through open source projects, 
                 knowledge sharing, and mentorship. Building tools and libraries 
                 that help others solve complex data challenges.
@@ -1130,16 +1130,16 @@ const Home: NextPage = () => {
               </div>
 
             {/* Mentorship */}
-            <div className="group bg-gray-50 rounded-xl p-8 border border-gray-100 hover:border-gray-200 hover:shadow-md transition-all duration-300">
+            <div className="group bg-gray-50 dark:bg-zinc-800/40 rounded-xl p-8 border border-gray-100 dark:border-zinc-800 hover:border-gray-200 hover:shadow-md transition-all duration-300">
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 rounded-lg bg-gray-200 flex items-center justify-center">
-                  <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-12 h-12 rounded-lg bg-gray-200 dark:bg-zinc-700 flex items-center justify-center">
+                  <svg className="w-6 h-6 text-gray-700 dark:text-zinc-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900">Mentorship</h3>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-zinc-100">Mentorship</h3>
               </div>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 dark:text-zinc-400 leading-relaxed">
                 Passionate about helping others grow in data science and technology. 
                 Offering guidance, sharing knowledge, and supporting the next 
                 generation of data professionals and researchers.

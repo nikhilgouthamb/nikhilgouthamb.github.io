@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import "./globals.css";
 
@@ -14,14 +12,14 @@ export const metadata: Metadata = {
   authors: [{ name: "Nikhil Goutham" }],
   creator: "Nikhil Goutham",
   publisher: "Nikhil Goutham",
-  metadataBase: new URL("https://nikhilgoutham.space"),
+  metadataBase: new URL("https://nikhilgouthamb.github.io"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: "Nikhil Goutham - Data Scientist",
     description: "Portfolio website of Nikhil Goutham - A passionate Data Scientist specializing in Machine Learning, Deep Learning, and Data Engineering.",
-    url: "https://nikhilgoutham.space",
+    url: "https://nikhilgouthamb.github.io",
     siteName: "Nikhil Goutham Portfolio",
     locale: "en_US",
     type: "website",
@@ -74,7 +72,7 @@ export default function RootLayout({
               "@type": "Person",
               "name": "Nikhil Goutham",
               "jobTitle": "Data Scientist",
-              "url": "https://nikhilgoutham.space",
+              "url": "https://nikhilgouthamb.github.io",
               "sameAs": [
                 "https://www.linkedin.com/in/nikhilgoutham",
                 "https://github.com/nikhilgouthamb",
@@ -105,8 +103,6 @@ export default function RootLayout({
             Skip to main content
           </a>
           {children}
-          <Analytics />
-          <SpeedInsights />
         </ThemeProvider>
       </body>
     </html>
